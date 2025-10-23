@@ -3,23 +3,31 @@ import pygame
 # inicializa la pantalla
 pygame.display.init()
 
-#configura la pantalla
-pygame.display.set_mode(size=(500, 500), flags=0, display=0, vsync=0)
+# dimensiones de la pantalla
+screen_width = 735
+screen_height = 490
+
+#configura e inicializa la pantalla
+screen = pygame.display.set_mode(size=(screen_width, screen_height))
 pygame.display.set_caption("Auxilio")
 
-#variable True para bucle
+#imagen de fondo
+background = pygame.image.load('assets/bg.jpg').convert()
+background = pygame.transform.scale( background, (screen_width, screen_height))
+
+#bucle para mantener la ventana abierta
 run = True
 
-#mientras que "run" sea true...
 while run:
     # bucle que se ejecuta cada vez que el usuario hace una accion (event)
     for event in pygame.event.get():
         # si dicho event es QUIT (cerrar la ventana), run es false (se deja de ejecutar el bucle)
         if event.type == pygame.QUIT:
             run = False
-    
-    #se actualiza la ventana automáticamente siempre que corra el ciclo
-    pygame.display.update()
+
+    screen.blit(background, (0,0))
+
+    pygame.display.flip()
 
 #se cierra pygame una vez finalizado el ciclo de run
 pygame.quit()
