@@ -1,6 +1,6 @@
 #####################
 
-Bienvenido a: Crea tu torta !!1!!!
+Bienvenido a: Make your cake !!1!!!
 
 Decora una torta a tu gusto, eligiendo colores y arrastrando elementos a ella :3
 
