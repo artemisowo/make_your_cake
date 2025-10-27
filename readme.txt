@@ -8,6 +8,8 @@ Extra: ponle nombre >.<
 
 ##################################
 
+Inspirado en: Toda la saga de Papa's Pizzeria :3
+
 Autora: Valentina Peralta
 
 Versión Actual: 0
