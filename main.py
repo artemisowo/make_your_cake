@@ -40,17 +40,21 @@ def start_game():
     base_rect = base.get_rect()
     base_rect.center = ((screen_width // 2) - 150, (screen_height // 2))
 
-    #colores de fondo de prueba -- BOTONES PARA ELEGIR BASE
+    # BOTONES PARA ELEGIR BASE
     button_choco_base = pygame.image.load('assets/botones/btn-choco.png').convert_alpha()
-    button_choco_base_rect = button_choco_base.get_rect(center = (500, 50))
-    BLUE = (0, 0, 255)
-    GREEN = (0, 255, 0)
+    button_choco_base_rect = button_choco_base.get_rect(center = (600, 100))
+
+    button_straw_base = pygame.image.load('assets/botones/btn-straw.png').convert_alpha()
+    button_straw_base_rect = button_straw_base.get_rect(center = (600, 220))
+
+    button_vainilla_base = pygame.image.load('assets/botones/btn-vainilla.png').convert_alpha()
+    button_vainilla_base_rect = button_straw_base.get_rect(center = (600, 340))
 
     # definir botones (rects fijos) con su clave para seleccionar la base
     button_bases_specs = [
         {'key': 'choco', 'img': button_choco_base, 'rect': button_choco_base_rect},
-        {'key': 'straw', 'color': BLUE, 'rect': pygame.Rect(500, 200, 100, 100)},
-        {'key': 'vainilla', 'color': GREEN, 'rect': pygame.Rect(500, 350, 100, 100)},
+        {'key': 'straw', 'img': button_straw_base, 'rect': button_straw_base_rect},
+        {'key': 'vainilla', 'img': button_vainilla_base, 'rect': button_vainilla_base_rect},
     ]
 
     #bucle para mantener la ventana abierta
